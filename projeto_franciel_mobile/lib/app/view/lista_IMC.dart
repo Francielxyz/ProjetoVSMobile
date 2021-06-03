@@ -26,7 +26,7 @@ class ListarIMC extends StatelessWidget {
               var imc = lista[i];
               return ListTile(
                 title: Text(imc['nome']),
-                subtitle: Text(imc['kg']),
+                subtitle: Text(imc['IMC']),
                 
                 trailing: Container(
                 width: 100,
