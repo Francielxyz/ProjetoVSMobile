@@ -14,8 +14,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       routes: {
-        HOME: (context) => ListaIMC(),
-        CALC_IMC: (context) => CalculoIMC()
+        HOME: (context) =>  ListarIMC(),
+        CALC_IMC: (context) =>  CalcIMC(),
       },
     );
   }

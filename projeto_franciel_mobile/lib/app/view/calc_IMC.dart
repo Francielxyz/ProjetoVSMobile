@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
-class CalculoIMC extends StatelessWidget {
+class CalcIMC extends StatefulWidget{
   @override
-  Widget build(BuildContext context) {
+  _CalcIMCState createState() => _CalcIMCState();
+}
+
+class _CalcIMCState extends State<CalcIMC> {
+  @override 
+  Widget build(BuildContext context){
     return Scaffold(
-      appBar: AppBar(title: Text('Calcular IMC'),),
+      appBar: AppBar(title: Text("Calcular IMC"),),
     );
   }
 }
