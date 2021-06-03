@@ -3,9 +3,9 @@ import 'package:projeto_franciel_mobile/app/my_app.dart';
 
 class ListarIMC extends StatelessWidget {
   final lista = [
-    {'none': 'Franciel', 'kg': '75', 'altura': '1,80', 'IMC': '23,65'},
-    {'none': 'Carlos', 'kg': '85', 'altura': '1,70', 'IMC': '29,41'},
-    {'none': 'Hinata', 'kg': '50', 'altura': '1,50', 'IMC': '22,22'},
+    {'nome': 'Franciel', 'kg': '75', 'altura': '1,80', 'IMC': '23,65'},
+    {'nome': 'Carlos', 'kg': '85', 'altura': '1,70', 'IMC': '29,41'},
+    {'nome': 'Hinata', 'kg': '50', 'altura': '1,50', 'IMC': '22,22'},
   ];
   @override
   Widget build(BuildContext context) {
