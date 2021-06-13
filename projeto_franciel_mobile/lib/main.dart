@@ -2,11 +2,11 @@ import 'package:flutter/material.dart';
 
 import 'app/my_app.dart';
 
-/*
 void main() {
   // Instânciando um novo objeto (MyApp())
   runApp(new MyApp());
-}*/
+}
+/*
 void main(List<String> arguments) async {
   
   
@@ -77,6 +77,4 @@ Future turmaNotas() async {
       ? Future.delayed(Duration(seconds: 2), () => print("Notal Final $soma - Média $media = APROVADO"))
       : Future.delayed(Duration(seconds: 2), () => print("Notal Final $soma - Média $media = REPROVADO"));
 }
-
-
-
+*/
