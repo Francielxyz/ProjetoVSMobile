@@ -1,6 +1,6 @@
 import 'package:projeto_franciel_mobile/app/database/sqlite/conection.dart';
 import 'package:projeto_franciel_mobile/app/domain/entities/imc.dart';
-import 'package:projeto_franciel_mobile/app/domain/interfaces/imc_dao.dart';
+import 'package:projeto_franciel_mobile/app/domain/interfaces/imcDao.dart';
 import 'package:sqflite/sqflite.dart';
 
 class ImcDAOImpl implements ImcDAO{
@@ -11,7 +11,6 @@ class ImcDAOImpl implements ImcDAO{
     _db = await Conection.get();
     List<Map<String, dynamic>> resultado = await _db.query("tb_imc");
     List<Imc> lista = List.generate(resultado.length, (i){
-      
       var linha = resultado[i];
       return Imc(
           id : linha["id"],
