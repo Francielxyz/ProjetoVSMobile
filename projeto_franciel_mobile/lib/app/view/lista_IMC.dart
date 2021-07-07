@@ -42,8 +42,6 @@ class ListarIMC extends StatelessWidget {
                           child: Row(
                             children: [
                               IconButton(
-                                  icon: Icon(Icons.edit), onPressed: null),
-                              IconButton(
                                   icon: Icon(Icons.delete), onPressed: null),
                             ],
                           )),
