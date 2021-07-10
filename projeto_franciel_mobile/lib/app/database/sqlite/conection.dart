@@ -8,6 +8,7 @@ class Conection{
   static Future<Database> get() async {
     if(_db == null){
       var path = join(await getDatabasesPath(), 'tb_imc');
+      deleteDatabase(path);
       _db = await openDatabase(
         path,
         version: 1,

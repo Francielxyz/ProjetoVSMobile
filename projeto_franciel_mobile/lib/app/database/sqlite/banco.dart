@@ -1,6 +1,6 @@
 final createTable = '''
   CREATE TABLE tb_imc (
-    id INT PRIMARY KEY
+    id INTEGER NOT NULL PRIMARY KEY
     ,nome VARCHAR(200) NOT NULL
     ,peso VARCHAR(20) NOT NULL
     ,altura VARCHAR(20) NOT NULL

@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'lista_IMC_back.dart';
+part of 'lista_imc_back.dart';
 
 // **************************************************************************
 // StoreGenerator

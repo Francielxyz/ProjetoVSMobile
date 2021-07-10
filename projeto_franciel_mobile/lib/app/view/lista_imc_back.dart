@@ -7,7 +7,7 @@ import 'package:projeto_franciel_mobile/app/domain/entities/imc.dart';
 import 'package:projeto_franciel_mobile/app/domain/service/imcService.dart';
 import 'package:projeto_franciel_mobile/app/my_app.dart';
 
-part 'lista_IMC_back.g.dart';
+part 'lista_imc_back.g.dart';
 
 class ListaImcBack = _ListaImcBack with _$ListaImcBack;
 
