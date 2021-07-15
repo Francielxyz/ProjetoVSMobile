@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mobx/mobx.dart';
@@ -29,8 +27,8 @@ abstract class _ListaImcBack with Store {
   }
 
 //metodo para chamar o cálculo de um novo imc
-  goToForm(BuildContext context) {
-    Navigator.of(context).pushNamed(MyApp.CALC_IMC).then(refreshList);
+  goToForm(BuildContext context, [Imc imc]) {
+    Navigator.of(context).pushNamed(MyApp.CALC_IMC, arguments: imc).then(refreshList);
   }
 
 //método de ecluiir

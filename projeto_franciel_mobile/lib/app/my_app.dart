@@ -7,16 +7,15 @@ class MyApp extends StatelessWidget {
   static const CALC_IMC = 'calc_IMC';
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  Widget build(BuildContext context) => MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.green,
       ),
       routes: {
         HOME: (context) =>  ListarIMC(),
-        CALC_IMC: (context) =>  CalcIMC(),
+        CALC_IMC: (context) =>  CalcIMCForm(),
       },
     );
   }
-} 
