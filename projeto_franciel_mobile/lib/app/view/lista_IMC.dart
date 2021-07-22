@@ -35,7 +35,7 @@ class ListarIMC extends StatelessWidget {
                       TextButton(
                         child: Text('Não'),
                         onPressed: () {
-                          Navigator.of(context).pop();
+                          _back.goToForm(context);
                         },
                       ),
                       TextButton(
@@ -55,7 +55,7 @@ class ListarIMC extends StatelessWidget {
           IconButton(
               icon: Icon(Icons.add),
               onPressed: () {
-                Navigator.of(context).pushNamed(MyApp.CALC_IMC);
+                _back.goToForm(context);
               })
         ],
       ),
@@ -75,7 +75,7 @@ class ListarIMC extends StatelessWidget {
                     return ListTile(
                       leading: fotoPerfil(imc.linkFoto),
                       title: Text(imc.nome),
-                      subtitle: Text(imc.imc),
+                      subtitle: Text("IMC " + imc.imc),
                       trailing: Container(
                           width: 100,
                           child: Row(
