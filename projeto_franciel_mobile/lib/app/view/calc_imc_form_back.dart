@@ -1,27 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get_it/get_it.dart';
-import 'package:mobx/mobx.dart';
 import 'package:projeto_franciel_mobile/app/domain/entities/imc.dart';
 import 'package:projeto_franciel_mobile/app/domain/service/imcService.dart';
 
-part 'calc_imc_form_back.g.dart';
 
-class CalcImcFormBack = _CalcImcFormBack with _$CalcImcFormBack;
-
-abstract class _CalcImcFormBack with Store {
+class CalcImcFormBack {
   Imc imc;
   var _serviceIMC = GetIt.I.get<ImcService>();
   bool _nomeValido;
   bool _alturaValido;
   bool _pesoValido;
 
-  bool _imcvalido;
+  // bool _imcvalido;  
   
-  @action
   bool get validacao => _nomeValido && _alturaValido && _pesoValido ;
 
   //verificar se é alteração ou novo cálculo de imc
-  _CalcImcFormBack(BuildContext context) {
+  CalcImcFormBack(BuildContext context) {
     var verificacao = ModalRoute.of(context).settings.arguments;
     imc = (verificacao == null) ? Imc() : verificacao;
   }
@@ -66,16 +61,15 @@ abstract class _CalcImcFormBack with Store {
     }
   }
 
-  String validarIMC(String altura, String peso) {
-    try {
-      _serviceIMC.calcDoImc(altura, peso);
-      _imcvalido = true;
-      return null;
-    } catch (e) {
-      _imcvalido = false;
-      return e.toString();
-    }
-  }
-
+  // String validarIMC(String altura, String peso) {
+  //   try {
+  //     _serviceIMC.calcDoImc(altura, peso);
+  //     _imcvalido = true;
+  //     return null;
+  //   } catch (e) {
+  //     _imcvalido = false;
+  //     return e.toString();
+  //   }
+  // }
 
 }

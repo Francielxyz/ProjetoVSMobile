@@ -1,7 +1,3 @@
-
-
-import 'dart:ffi';
-
 import 'package:get_it/get_it.dart';
 import 'package:projeto_franciel_mobile/app/domain/entities/imc.dart';
 import 'package:projeto_franciel_mobile/app/domain/exception/domainException.dart';

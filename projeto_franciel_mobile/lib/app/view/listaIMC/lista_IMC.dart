@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:projeto_franciel_mobile/app/domain/entities/imc.dart';
-import 'package:projeto_franciel_mobile/app/my_app.dart';
+import 'package:projeto_franciel_mobile/app/view/drawer/drawerIMC.dart';
 import 'package:projeto_franciel_mobile/app/view/lista_imc_back.dart';
 
 class ListarIMC extends StatelessWidget {
@@ -35,7 +35,7 @@ class ListarIMC extends StatelessWidget {
                       TextButton(
                         child: Text('Não'),
                         onPressed: () {
-                          _back.goToForm(context);
+                          _back.goToCalcImc(context);
                         },
                       ),
                       TextButton(
@@ -49,16 +49,11 @@ class ListarIMC extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Scaffold(
+      drawer: DrawerIMC(),
       appBar: AppBar(
-        title: Text('IMC já Calculados'),
-        actions: [
-          IconButton(
-              icon: Icon(Icons.add),
-              onPressed: () {
-                _back.goToForm(context);
-              })
-        ],
+        title: Text('Cálculos Realizados'),
       ),
+      
       body: Observer(builder: (context) {
         return FutureBuilder(
             future: _back.list,
@@ -81,7 +76,7 @@ class ListarIMC extends StatelessWidget {
                           child: Row(
                             children: [
                               editarImc((){
-                                _back.goToForm(context, imc);
+                                _back.goToCalcImc(context, imc);
                               }),
                               excluirImc(context, () {
                                 _back.excluir(imc.id);

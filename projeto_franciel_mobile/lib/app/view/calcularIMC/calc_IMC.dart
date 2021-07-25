@@ -25,19 +25,21 @@ class CalcIMCForm extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.all(12),
-        child: Form(
-          key: _form,
-          child: Column(
-            children: [
-              campoNome(_back),
-              campoAltura(_back),
-              campoPeso(_back),
-              campoLink(_back),
-              campoIMC(_back)
-            ],
+        // child: SingleChildScrollView(
+          padding: EdgeInsets.all(12),
+          child: Form(
+            key: _form,
+            child: ListView(
+              children: [
+                campoNome(_back),
+                campoAltura(_back),
+                campoPeso(_back),
+                campoLink(_back),
+                campoIMC(_back)
+              ],
+            ),
           ),
-        ),
+        // ),
       ),
     );
   }
@@ -86,7 +88,7 @@ class CalcIMCForm extends StatelessWidget {
   }
 
   Widget campoIMC(CalcImcFormBack back) {
-var maskFormatter = new MaskTextInputFormatter(mask: '##.##');
+    var maskFormatter = new MaskTextInputFormatter(mask: '##.##');
 
     return TextFormField(
       onSaved: (novoValor) => back.imc.imc = novoValor,

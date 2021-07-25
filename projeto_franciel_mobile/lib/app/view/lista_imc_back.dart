@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mobx/mobx.dart';
 import 'package:projeto_franciel_mobile/app/domain/entities/imc.dart';
@@ -27,8 +29,48 @@ abstract class _ListaImcBack with Store {
   }
 
 //metodo para chamar o cálculo de um novo imc
-  goToForm(BuildContext context, [Imc imc]) {
-    Navigator.of(context).pushNamed(MyApp.CALC_IMC, arguments: imc).then(refreshList);
+  goToCalcImc(BuildContext context, [Imc imc]) {
+    Navigator.of(context)
+        .pushNamed(MyApp.CALC_IMC, arguments: imc)
+        .then(refreshList);
+  }
+
+//metodo para chamar a tela sobre o applicativo
+  goToSobre(BuildContext context) {
+    Navigator.of(context).pushNamed(MyApp.SOBRE_APP);
+  }
+
+//metodo para sair do aplicativo, trazendo uma msg para confirma ou não
+  goToFechar(BuildContext context) {
+    Widget cancel = FlatButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        color: Colors.red,
+        child: Text("Não"),
+        textColor: Colors.white,
+        onPressed: () => Navigator.of(context).pop());
+
+    Widget confirm = FlatButton(
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+        color: Colors.green,
+        child: Text("Sim"),
+        textColor: Colors.white,
+        onPressed: () => SystemNavigator.pop());
+
+    AlertDialog alert = AlertDialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+      title: Text("Deseja fechar o aplicativo?"),
+      actions: [
+        confirm,
+        cancel,
+      ],
+    );
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return alert;
+      },
+    );
   }
 
 //método de ecluiir
