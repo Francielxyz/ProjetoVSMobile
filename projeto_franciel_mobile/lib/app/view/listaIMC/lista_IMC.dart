@@ -29,18 +29,26 @@ class ListarIMC extends StatelessWidget {
           showDialog(
               context: context,
               builder: (context) => AlertDialog(
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                     title: Text('Excluir'),
                     content: Text('Confirma a Exclusão?'),
                     actions: [
-                      TextButton(
-                        child: Text('Não'),
-                        onPressed: () {
-                          _back.goToCalcImc(context);
-                        },
-                      ),
-                      TextButton(
+                      
+                      FlatButton(
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
+                        color: Colors.green,
                         child: Text('Sim'),
+                        textColor: Colors.white,
                         onPressed: remove,
+                      ),
+
+                      FlatButton(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15)),
+                        color: Colors.red,
+                        child: Text('Não'),
+                        textColor: Colors.white,
+                        onPressed: () => Navigator.of(context).pop(),
                       ),
                     ],
                   ));

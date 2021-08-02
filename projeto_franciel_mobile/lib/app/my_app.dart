@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:projeto_franciel_mobile/app/view/calcularIMC/calc_IMC.dart';
 import 'package:projeto_franciel_mobile/app/view/listaIMC/lista_IMC.dart';
-import 'package:projeto_franciel_mobile/app/view/sobreApp/sobreApp_page.dart';
+import 'package:projeto_franciel_mobile/app/view/sobreApp/sobreApp.dart';
 
 class MyApp extends StatelessWidget {
   static const HOME = '/';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       routes: {
         HOME: (context) =>  ListarIMC(),
         CALC_IMC: (context) =>  CalcIMCForm(),
-        SOBRE_APP: (context) => SobreAppPage(),
+        SOBRE_APP: (context) => SobreApp(),
       },
     );
   }
