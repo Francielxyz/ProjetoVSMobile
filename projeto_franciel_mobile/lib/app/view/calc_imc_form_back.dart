@@ -3,7 +3,6 @@ import 'package:get_it/get_it.dart';
 import 'package:projeto_franciel_mobile/app/domain/entities/imc.dart';
 import 'package:projeto_franciel_mobile/app/domain/service/imcService.dart';
 
-
 class CalcImcFormBack {
   Imc imc;
   var _serviceIMC = GetIt.I.get<ImcService>();
@@ -11,9 +10,9 @@ class CalcImcFormBack {
   bool _alturaValido;
   bool _pesoValido;
 
-  // bool _imcvalido;  
-  
-  bool get validacao => _nomeValido && _alturaValido && _pesoValido ;
+  // bool _imcvalido;
+
+  bool get validacao => _nomeValido && _alturaValido && _pesoValido;
 
   //verificar se é alteração ou novo cálculo de imc
   CalcImcFormBack(BuildContext context) {
@@ -25,7 +24,7 @@ class CalcImcFormBack {
   salvar() async {
     await _serviceIMC.save(imc);
   }
-
+  
   //validações
   String validarNome(String nome) {
     try {
@@ -60,16 +59,4 @@ class CalcImcFormBack {
       return e.toString();
     }
   }
-
-  // String validarIMC(String altura, String peso) {
-  //   try {
-  //     _serviceIMC.calcDoImc(altura, peso);
-  //     _imcvalido = true;
-  //     return null;
-  //   } catch (e) {
-  //     _imcvalido = false;
-  //     return e.toString();
-  //   }
-  // }
-
 }

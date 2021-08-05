@@ -10,7 +10,7 @@ class ImcService {
     validarNome(imc.nome);
     validarPeso(imc.peso);
     validarAltura(imc.altura);
-    calcDoImc(imc.altura, imc.peso);
+    imc.imc = calcDoImc(imc.altura, imc.peso);
     _dao.save(imc);
   }
 
@@ -55,8 +55,7 @@ class ImcService {
 //Calculo do IMC
   String calcDoImc(String altura, String peso){
     double valorImc = double.parse(peso) / (double.parse(altura) * double.parse(altura));
-    print("---------- $valorImc ");
-    return valorImc.toString();
+    return valorImc.toStringAsPrecision(4);    
   }
 
 } 

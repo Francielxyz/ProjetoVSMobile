@@ -28,6 +28,13 @@ abstract class _ListaImcBack with Store {
     refreshList();
   }
 
+//metodo para chamar a lista de calculos
+  goToListaImc(BuildContext context){
+      Navigator.of(context)
+        .pushNamed(MyApp.HOME)
+        .then(refreshList);
+  }
+
 //metodo para chamar o cálculo de um novo imc
   goToCalcImc(BuildContext context, [Imc imc]) {
     Navigator.of(context)

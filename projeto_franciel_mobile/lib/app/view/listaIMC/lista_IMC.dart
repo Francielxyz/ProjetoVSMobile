@@ -16,7 +16,7 @@ class ListarIMC extends StatelessWidget {
   Widget editarImc(Function edit){
     return IconButton(
       icon: Icon(Icons.edit), 
-      color: Colors.lightBlueAccent,
+      color: Colors.green,
       onPressed: edit
       );
   }
