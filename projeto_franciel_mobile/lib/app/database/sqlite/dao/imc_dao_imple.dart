@@ -25,7 +25,7 @@ class ImcDAOImpl implements ImcDAO{
   }
 
   @override
-  remove(int id) async {
+  remove(dynamic id) async {
     _db = await Conection.get();
     var sql = "DELETE FROM tb_imc WHERE id = ?";
     _db.rawDelete(sql, [id]);

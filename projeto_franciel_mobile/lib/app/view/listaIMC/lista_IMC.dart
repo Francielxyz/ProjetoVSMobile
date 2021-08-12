@@ -96,6 +96,7 @@ class ListarIMC extends StatelessWidget {
                   },
                 );
               }
-            });
+            }
+            );
       }));
 }

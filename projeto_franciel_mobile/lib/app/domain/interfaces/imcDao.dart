@@ -5,7 +5,7 @@ abstract class ImcDAO{
   
   save(Imc imc);
 
-  remove(int id);
+  remove(dynamic id);
 
   Future<List<Imc>> find();
 

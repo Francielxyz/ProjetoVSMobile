@@ -1,6 +1,7 @@
 
+
 class Imc{
-  int id;
+  dynamic id;
   String nome; 
   String peso;
   String altura;

@@ -81,7 +81,7 @@ abstract class _ListaImcBack with Store {
   }
 
 //método de ecluiir
-  excluir(int id) {
+  excluir(dynamic id) {
     _serviceImc.remove(id);
     refreshList();
   }

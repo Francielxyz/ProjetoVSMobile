@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 import 'package:projeto_franciel_mobile/app/view/calc_imc_form_back.dart';
 import 'package:projeto_franciel_mobile/app/view/calcularIMC/componente/botao_calcular_widget.dart';
 import 'package:projeto_franciel_mobile/app/view/calcularIMC/componente/textFormField_widget.dart';

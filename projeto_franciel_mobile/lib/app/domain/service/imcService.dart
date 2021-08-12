@@ -14,7 +14,7 @@ class ImcService {
     _dao.save(imc);
   }
 
-  remove(int id){
+  remove(dynamic id){
     _dao.remove(id);
   }
 

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:mask_text_input_formatter/mask_text_input_formatter.dart';
 
+// ignore: must_be_immutable
 class TextFormFieldWidget extends StatefulWidget {
   //Variavel para adicionar texto de títulos nas caixas de texto
   String labelText;
