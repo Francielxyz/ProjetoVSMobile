@@ -74,6 +74,6 @@ excluir(int id) async {
   var resposta = await http.delete(Uri.parse(linkEndpoint+"/$id"));
 
   if (resposta.statusCode != 200) {
-    throw Exception("Erro REST API");
+    throw Exception("Erros REST API");
   }
 }
