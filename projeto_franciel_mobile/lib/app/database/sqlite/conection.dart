@@ -14,10 +14,10 @@ class Conection{
         version: 1,
         onCreate: (db, v){
           db.execute(createTable);
-          db.execute(insertInto1);
-          db.execute(insertInto2);
-          db.execute(insertInto3);
-          db.execute(insertInto4);
+          // db.execute(insertInto1);
+          // db.execute(insertInto2);
+          // db.execute(insertInto3);
+          // db.execute(insertInto4);
         }
         );
     }

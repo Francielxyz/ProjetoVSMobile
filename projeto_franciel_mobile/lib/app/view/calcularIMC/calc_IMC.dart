@@ -65,8 +65,9 @@ class CalcIMCForm extends StatelessWidget {
                    _form.currentState.validate();
                   _form.currentState.save();
                   if (_back.validacao) {
-                    _back.salvar();
-                    _navegacao.goToListaImc(context);
+                    _back.salvar(context);
+
+
                   }
                 },
               ),

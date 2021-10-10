@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:get_it/get_it.dart';
 import 'package:projeto_franciel_mobile/app/domain/entities/imc.dart';
 import 'package:projeto_franciel_mobile/app/domain/service/imcService.dart';
+import 'package:projeto_franciel_mobile/app/view/lista_imc_back.dart';
 
 class CalcImcFormBack {
   Imc imc;
@@ -21,8 +22,9 @@ class CalcImcFormBack {
   }
 
   //salvar
-  salvar() async {
+  salvar(BuildContext context) async {
     await _serviceIMC.save(imc);
+    Navigator.of(context).pop();
   }
   
   //validações
